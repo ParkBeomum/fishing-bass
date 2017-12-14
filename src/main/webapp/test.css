@@ -1,0 +1,11 @@
+@CHARSET "EUC-KR";
+
+#header{
+	background-color:red;	
+}
+#section{
+	background-color:green;
+}
+#footer{
+	background-color:blue;
+}
