@@ -10,8 +10,8 @@
 	<!-- Logo -->
 	<div class="eight columns">
 		<div id="logo">
-			<a href="#"><img src="${pageContext.request.contextPath}/resources/images/logo.png" alt="logo" /></a>
-			<div id="tagline">It's time to impress your visitors!</div>
+			<a href="index.do"><img src="${pageContext.request.contextPath}/resources/images/logo.png" alt="logo" /></a>
+			<div id="tagline">배스를 찾아 사람들이 모이는곳</div>
 			<div class="clear"></div>
 		</div>
 	</div>

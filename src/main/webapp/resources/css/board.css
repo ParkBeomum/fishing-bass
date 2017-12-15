@@ -1,0 +1,205 @@
+/* board
+-------------------------------------------------------------------- */
+.board-top {
+	margin-bottom: 25px;
+}
+.board-top p {
+	margin: 0;
+}
+.board-top em {
+	display: block;
+	margin-bottom: 4px;
+	color: #333;
+	font-size: 18px;
+	line-height: 1.25;
+	letter-spacing: -1px;
+}
+
+
+.board-wrap {
+	position: relative;
+}
+.board-head {
+	margin-bottom:4%;
+}
+.board-head h2 {
+	font-size:18px;
+	color:#333; 
+	font-weight: normal;
+}
+.board-head h2 span {
+	display:block;
+}
+.board-head p {
+	font-size:14px;
+	margin:0;
+}
+@media screen and (max-width: 980px) {
+	.board-head h2 { font-size:16px; }
+	.board-head h2 span { display:inline; }
+}
+@media screen and (max-width: 640px) {
+	.board-head h2 { font-size:14px; }
+}/*/mediaquery*/
+
+
+
+/* search-error */
+.search-error {
+	position: relative;
+	background: #f9e1dd;
+	border:2px solid #ca2100;
+	color:#ca2100;
+	font-weight:bold;
+	padding: 2%;
+	border-radius: 3px;
+	margin-bottom: 2%;
+}
+.search-error p {
+	margin: 0;
+}
+.search-error .icon {
+	position:absolute;
+	top:50%;
+	right:2%;
+	margin-top:-8px;
+}
+
+
+/* search-bar */
+.search-bar {
+	position: relative;
+	background: #666;
+	text-align: center;
+	padding: 4px 0;
+	border-radius: 3px;
+	margin-bottom: 2%;
+}
+.search-bar label {
+	color: #ddd;
+	font-weight: bold;
+	margin-right: 2%;
+}
+.search-bar select {
+	width: 15%;
+	height: 30px;
+	line-height: 200%;
+}
+.search-bar .text {
+	width: 30%;
+}
+.search-bar .search {
+	margin-left: 10px;
+	vertical-align: middle;
+}
+.search-result {
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 2%;
+	padding: 16px 18px 15px;
+	border-radius: 3px;
+	background: #f3f3f3;
+}
+.search-result p {
+	margin: 0;
+	font-size: 14px;
+	line-height: 1.5;
+}
+.search-result em {
+	color: #85451f;
+	font-weight: bold;
+}
+.search-result .btn {
+	position: absolute;
+	top: 15px;
+	right: 18px;
+}
+.search-result .btn .icon {
+	margin-left:8px;
+}
+
+@media screen and (max-width: 560px) {
+	.search-bar,
+	.search-result { margin-bottom: 3%; }
+	.search-bar label { display: none; }
+	.search-bar select { width: 30%; }
+	.search-bar .text { width: 49%; }
+	.search-bar .search { margin-left: 7px; }
+
+	.search-result a.btn span { display:none; }
+	.search-result a.btn i.icon { margin-left:0; }
+}/*/mediaquery*/
+
+
+
+/* board-list */
+.board-list .col-num { float:left; width:5%; margin-top: 2px; text-align: center; }
+.board-list .col-name { float:left; width:7%; margin-top: 2px; text-align: center; }
+.board-list .col-date { float:left; width:12%; text-align: center; }
+.board-list .col-title { float:left; width:70%; margin-left:3%; }
+.board-list .notice .col-num,
+.board-list .notice .col-date { color: #6f91a9; text-transform:uppercase; }
+
+.board-list li {
+	vertical-align: top;
+	padding: 17px 0 22px; 
+	border-bottom: 1px dotted black;
+}
+.board-list a {
+	overflow: hidden;
+	display: inline-block;
+	max-width:75%;
+	color: #333;
+	font-size: 13px; 
+	text-overflow: ellipsis;
+	white-space: nowrap; 
+	word-wrap:break-word;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+.board-list a:hover {
+	color: #0093f0;
+}
+.board-list li.notice {
+	position: relative;
+	z-index: 10;
+	background: #ebeff3;
+	border-bottom: 1px solid #d0d8de;
+	margin-bottom: -1px;
+}
+.board-list .notice a {
+	color: #3273a0;
+	font-size: 16px;
+	font-weight: bold;
+}
+@media screen and (max-width: 680px) {
+	.board-list .col-num { display:none; }
+	.board-list .col-title { width:70%; }
+	.board-list .col-date { width:17%; }
+	.board-list .col-name { width:10%; }
+}/*/mediaquery*/
+
+@media screen and (max-width: 560px) {
+	.board-list li { padding: 10px 0; }
+	.board-list .col-title { float:none; width:auto; margin-bottom:5px; }
+	.board-list .col-title a { font-size: 13px; }
+	.board-list .col-date { float:none; width:auto; text-align: left; margin-left:3%; }
+	.board-list .col-name { float:none; width:auto; text-align: left; margin-left:3%; }
+}/*/mediaquery*/
+
+/* custom */
+
+.board-list{
+    margin-bottom: 20px;
+}
+
+.page-content .container{
+	width:50%; 
+	float:left; 
+}
+a.btn-write{
+	float:right; 
+	overflow:hidden;
+}
+ 
+/*/*/

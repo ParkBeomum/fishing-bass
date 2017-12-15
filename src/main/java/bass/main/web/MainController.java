@@ -21,4 +21,9 @@ public class MainController {
 		System.out.println("index start");
 		return "index"; 
 	}
+	@RequestMapping(value = "/board.do", method = RequestMethod.GET)
+	public String board(Locale locale, Model model) { 
+		System.out.println("index start");
+		return "board"; 
+	}
 }

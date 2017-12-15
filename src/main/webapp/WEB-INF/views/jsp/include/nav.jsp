@@ -8,15 +8,20 @@
 </head>
 <body>
 	<ul id="nav">
-		<li><a id="current" href="index.html">Home</a>
+		<li><a id="current" href="index.do">Home</a>
 			<ul>
-				<li><a href="index.html">Home #1</a></li>
+				<li><a href="index.html">공지사항</a></li>
 				<li><a href="index_2.html">Home #2</a></li>
 				<li><a href="index_3.html">Home #3</a></li>
 				<li><a href="index_4.html">Home #4</a></li>
 			</ul></li>
 
-		<li><a href="#">Features</a>
+		<li><a href="board.do">테스트게시판</a>
+			<ul>
+				<li><a href="board.do">게시판</a></li>
+			</ul></li>
+
+		<li><a href="#">배스입문</a>
 			<ul>
 				<li><a href="full_width.html">Full Width</a></li>
 				<li><a href="about-us.html">About Us</a></li>
@@ -32,7 +37,7 @@
 					</ul></li>
 			</ul></li>
 
-		<li><a href="shortcodes.html">Shortcodes</a></li>
+		<li><a href="shortcodes.html">조행기</a></li>
 
 		<li><a href="#">Portfolio</a>
 			<ul>
@@ -42,14 +47,17 @@
 				<li><a href="single_project.html">Single Project</a></li>
 			</ul></li>
 
-		<li><a href="shop.html">Shop</a>
+		<li><a href="shop.html">회원게시판</a>
 			<ul>
 				<li><a href="shop.html">Shop</a></li>
 				<li><a href="product-page.html">Product Page</a></li>
 			</ul></li>
 
-		<li><a href="blog.html">Blog</a></li>
-		<li><a href="contact.html">Contact</a></li>
+		<li><a href="blog.html">함께해요</a></li>
+		<li><a href="contact.html">동출</a></li>
+		<li><a href="contact.html">밸리보트</a></li>
+		<li><a href="contact.html">보팅정보</a></li>
+		<li><a href="contact.html">중고장터</a></li>
 
 	</ul>
 
