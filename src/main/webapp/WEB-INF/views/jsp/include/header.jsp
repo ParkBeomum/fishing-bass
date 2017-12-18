@@ -33,8 +33,8 @@
 		<!-- Contact Details -->
 		<div id="contact-details">
 			<ul>
-				<li><i class="fa  fa-envelope"></i><a href="#">support@centum.com</a></li>
-				<li><i class="fa fa-phone"></i>+48 880 450 120</li>
+				<li><i class="fa  fa-envelope"></i><a href="#">sos891214@gmail.com</a></li>
+				<li><i class="fa fa-phone"></i>+82 010 5607 8366</li>
 			</ul>
 		</div>
 	

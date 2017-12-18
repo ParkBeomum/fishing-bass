@@ -18,7 +18,9 @@
 
 		<li><a href="board.do">테스트게시판</a>
 			<ul>
-				<li><a href="board.do">게시판</a></li>
+				<li><a href="board.do">게시판페이지</a></li>
+				<li><a href="detailBoard.do">게시글디테일페이지</a></li>
+				<li><a href="writeBoard.do">게시판작성페이지</a></li>
 			</ul></li>
 
 		<li><a href="#">배스입문</a>

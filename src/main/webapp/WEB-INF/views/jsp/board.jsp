@@ -62,6 +62,26 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/extensions/revolution.extension.slideanims.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/extensions/revolution.extension.video.min.js"></script>
 
+<script type="text/javascript">
+	$(document).ready(function(){
+			$(".col-title").click(function(e){
+				e.preventDefault();
+				var num = $(this).prev().prev().text();
+				$(location).attr('href', "detailBoard.do");
+				
+/* 		        $.ajax({
+		            url:'getBoard.do',
+		            type:'get',
+		            data: num,
+		            success:function(data){
+		               alert(data);
+		            }
+		        }) */
+				
+			});
+	});
+</script>
+
 </head>
 <body>
 <!-- Regular Table
@@ -94,7 +114,7 @@
                         <div class="col-num">20</div>
                         <div class="col-name">박범운</div>
                         <div class="col-title">
-                            <a href="">[마감] 플랜코리아 인재채용</a>
+                        	<a href="">[마감] 플랜코리아 인재채용</a>
                         </div>
                         <div class="col-date">2017.08.18</div>
                     </li>
@@ -267,7 +287,7 @@
 					</ul>
 				</div>
 			</div>
-			<a href="#" class="button color btn-write">글쓰기</a>
+			<a href="writeBoard.do" class="button color btn-write">글쓰기</a>
 		</div>
 	</div>
 </body>
