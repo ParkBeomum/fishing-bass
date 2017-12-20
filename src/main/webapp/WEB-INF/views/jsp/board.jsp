@@ -7,6 +7,9 @@
 ================================================== -->
 <title>Centum</title>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
 <!-- Mobile Specific
 ================================================== -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -64,6 +67,8 @@
 
 <script type="text/javascript">
 	$(document).ready(function(){
+
+		
 			$(".col-title").click(function(e){
 				e.preventDefault();
 				var num = $(this).prev().prev().text();
@@ -109,170 +114,25 @@
 		<!-- 960 Container / End -->
 		<div class="page-content">
             <div class="board board-list">
-                <ul>
-                    <li>
-                        <div class="col-num">20</div>
-                        <div class="col-name">박범운</div>
-                        <div class="col-title">
-                        	<a href="">[마감] 플랜코리아 인재채용</a>
-                        </div>
-                        <div class="col-date">2017.08.18</div>
-                    </li>
-                    <li>
-                        <div class="col-num">19</div>
-                        <div class="col-name">박범운</div>
-                        <div class="col-title">
-                            <a href="">2017년 하반기 번역 플랜티어 발표</a>
-                        </div>
-                        <div class="col-date">2017.08.08</div>
-                    </li>
-                    <li>
-                        <div class="col-num">18</div>
-                        <div class="col-name">박범운</div>
-                        <div class="col-title">
-                            <a href="">[마감] 2017년 하반기 플랜티어 모집공고</a>
-                        </div>
-                        <div class="col-date">2017.07.11</div>
-                    </li>
-                    <li>
-                        <div class="col-num">17</div>
-                        <div class="col-name">박범운</div>
-                        <div class="col-title">
-                            <a href="">[공지] 홈페이지 서버 교체 안내</a>
-                        </div>
-                        <div class="col-date">2017.06.05</div>
-                    </li>
-                    <li>
-                        <div class="col-num">16</div>
-                        <div class="col-name">박범운</div>
-                        <div class="col-title">
-                            <a href="">[마감] 파트타임 직원 모집</a>
-                        </div>
-                        <div class="col-date">2017.05.22</div>
-                    </li>
-                    <li>
-                        <div class="col-num">15</div>
-                        <div class="col-name">박범운</div>
-                        <div class="col-title">
-                            <a href="">홈페이지 서버 점검 안내</a>
-                        </div>
-                        <div class="col-date">2017.05.18</div>
-                    </li>
-                    <li>
-                        <div class="col-num">14</div>
-                        <div class="col-name">박범운</div>
-                        <div class="col-title">
-                            <a href="">[마감] 플랜코리아 인재채용</a>
-                        </div>
-                        <div class="col-date">2017.04.24</div>
-                    </li>
-                    <li>
-                        <div class="col-num">13</div>
-                        <div class="col-name">박범운</div>
-                        <div class="col-title">
-                            <a href="">[마감] 제 10회 네팔 The좋은여행</a>
-                            <i class="icon icon-file"></i>
-                        </div>
-                        <div class="col-date">2017.04.13</div>
-                    </li>
-                    <li>
-                        <div class="col-num">12</div>
-                        <div class="col-name">박범운</div>
-                        <div class="col-title">
-                            <a href="">[마감] 제8회 The좋은모임 &quot;Colored PLAN&quot;</a>
-                        </div>
-                        <div class="col-date">2017.03.09</div>
-                    </li>
-                    <li>
-                        <div class="col-num">11</div>
-                        <div class="col-name">박범운</div>
-                        <div class="col-title">
-                            <a href="">플랜과 함께해주실 2017 상반기 플랜티어를 모집합니다!</a>
-                        </div>
-                        <div class="col-date">2017.02.08</div>
-                    </li>
-                    <li>
-                        <div class="col-num">10</div>
-                        <div class="col-name">박범운</div>
-                        <div class="col-title">
-                            <a href="">[마감] 플랜코리아 인재채용</a>
-                        </div>
-                        <div class="col-date">2017.08.18</div>
-                    </li>
-                    <li>
-                        <div class="col-num">9</div>
-                        <div class="col-name">박범운</div>
-                        <div class="col-title">
-                            <a href="">2017년 하반기 번역 플랜티어 발표</a>
-                        </div>
-                        <div class="col-date">2017.08.08</div>
-                    </li>
-                    <li>
-                        <div class="col-num">8</div>
-                        <div class="col-name">박범운</div>
-                        <div class="col-title">
-                            <a href="">[마감] 2017년 하반기 플랜티어 모집공고</a>
-                        </div>
-                        <div class="col-date">2017.07.11</div>
-                    </li>
-                    <li>
-                        <div class="col-num">7</div>
-                        <div class="col-name">박범운</div>
-                        <div class="col-title">
-                            <a href="">[공지] 홈페이지 서버 교체 안내</a>
-                        </div>
-                        <div class="col-date">2017.06.05</div>
-                    </li>
-                    <li>
-                        <div class="col-num">6</div>
-                        <div class="col-name">박범운</div>
-                        <div class="col-title">
-                            <a href="">[마감] 파트타임 직원 모집</a>
-                        </div>
-                        <div class="col-date">2017.05.22</div>
-                    </li>
-                    <li>
-                        <div class="col-num">5</div>
-                        <div class="col-name">박범운</div>
-                        <div class="col-title">
-                            <a href="">홈페이지 서버 점검 안내</a>
-                        </div>
-                        <div class="col-date">2017.05.18</div>
-                    </li>
-                    <li>
-                        <div class="col-num">4</div>
-                        <div class="col-name">박범운</div>
-                        <div class="col-title">
-                            <a href="">[마감] 플랜코리아 인재채용</a>
-                        </div>
-                        <div class="col-date">2017.04.24</div>
-                    </li>
-                    <li>
-                        <div class="col-num">3</div>
-                        <div class="col-name">박범운</div>
-                        <div class="col-title">
-                            <a href="">[마감] 제 10회 네팔 The좋은여행</a>
-                            <i class="icon icon-file"></i>
-                        </div>
-                        <div class="col-date">2017.04.13</div>
-                    </li>
-                    <li>
-                        <div class="col-num">2</div>
-                        <div class="col-name">박범운</div>
-                        <div class="col-title">
-                            <a href="">[마감] 제8회 The좋은모임 &quot;Colored PLAN&quot;</a>
-                        </div>
-                        <div class="col-date">2017.03.09</div>
-                    </li>
-                    <li>
-                        <div class="col-num">1</div>
-                        <div class="col-name">박범운</div>
-                        <div class="col-title">
-                            <a href="">플랜과 함께해주실 2017 상반기 플랜티어를 모집합니다!</a>
-                        </div>
-                        <div class="col-date">2017.02.08</div>
-                    </li>
-                </ul>
+                <c:choose>
+                	<c:when test="${fn:length(list) > 0}">
+                		<ul>
+                			<c:forEach items="${list }" var="row">
+								<li>
+			                        <div class="col-num">${row.board_number}</div>
+			                        <div class="col-name">${row.board_writer}</div>
+			                        <div class="col-title">
+			                        	<a href="">${row.board_title}</a>
+			                        </div>
+			                        <div class="col-date">2017.08.18</div>
+			                    </li>
+             			 	</c:forEach>
+                		</ul>
+                	</c:when>
+                	<c:otherwise>
+                		조회된 결과가 없습니다.
+                	</c:otherwise>
+				</c:choose>                	
             </div> <!-- end border-list -->
 	        <div class="clearfix"></div>
 			<div class="container">
