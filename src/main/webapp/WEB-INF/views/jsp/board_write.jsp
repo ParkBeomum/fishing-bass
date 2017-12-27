@@ -62,7 +62,42 @@
 
 <!-- CK Editor -->
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/ckeditor/ckeditor.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
 
+		$(".saveBtn").click(function()
+		{
+			
+			var ckdata = CKEDITOR.instances.editor1.getData();
+			if ( ckdata == '' ){
+				alert( 'There is no data available.' );
+				return;
+			}
+			 
+			$(".title").val(ckdata);
+			
+			var formData = $("#boardWriteForm").serialize();
+			
+			
+	
+			$.ajax({
+	 					type : "POST",
+	 					url : "insertBoard.do",
+	 					cache : false,
+	 					data : formData,
+	 					success : onSuccess,
+	 					error : onError
+			});
+		});
+	
+		function onSuccess(json, status){
+			alert("저장되었습니다.");
+			location.href="board.do";
+		}
+		function onError(data, status){alert("error");}
+        	
+	});
+</script>
 </head>
 
 <body>
@@ -90,21 +125,25 @@
 		</div>
 		<!-- 960 Container / End -->
 		<div class="page-content">
- 			<form>
+ 			<form id="boardWriteForm">
  				<b>제목</b><input type="text" name="title" size="140">
  				<div class="clear"></div> 
  				<br/>
+ 				<input type="hidden" name="content" class="title">
 	            <textarea name="editor1" id="editor1" rows="10" cols="80">
 	                This is my textarea to be replaced with CKEditor.
 	            </textarea>
 	            <script>
-	                // Replace the <textarea id="editor1"> with a CKEditor
-	                // instance, using default configuration.
-	                CKEDITOR.replace( 'editor1' );
+		            // Replace the <textarea id="editor1"> with a CKEditor
+		            // instance, using default configuration.
+		            CKEDITOR.replace( 'editor1' , { 
+		            	width:700,
+		            	height:400
+		            });
 	            </script>
       	    </form>
       	    <br/>
-      	    <button>저장</button>
+      	    <button class="saveBtn">저장</button>
 		</div>
 	</div>
 </body>

@@ -6,10 +6,21 @@
      
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://52.79.126.35:3306/bass"/>
+        <property name="url" value="jdbc:mysql://52.79.126.35:3306/bass?verifyServerCertificate=false&amp;useSSL=false"/>
         <property name="username" value="admin"/>
         <property name="password" value="admin"/>
     </bean>
+    
+    <bean id="dataSourceLog" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">
+        <constructor-arg ref="dataSource" />
+        <property name="logFormatter">
+            <bean class="net.sf.log4jdbc.tools.Log4JdbcCustomFormatter">
+                <property name="loggingType" value="MULTI_LINE" />
+                <property name="sqlPrefix" value="SQL         :  "/>
+            </bean>
+        </property>
+    </bean>
+
 </beans>
 
 

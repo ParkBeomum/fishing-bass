@@ -119,12 +119,12 @@
                 		<ul>
                 			<c:forEach items="${list }" var="row">
 								<li>
-			                        <div class="col-num">${row.board_number}</div>
-			                        <div class="col-name">${row.board_writer}</div>
+			                        <div class="col-num">${row.NUM}</div>
+			                        <div class="col-name">${row.WRITE}</div>
 			                        <div class="col-title">
-			                        	<a href="">${row.board_title}</a>
+			                        	<a href="">${row.TITLE}</a>
 			                        </div>
-			                        <div class="col-date">2017.08.18</div>
+			                        <div class="col-date">${row.CREATEDATE}</div>
 			                    </li>
              			 	</c:forEach>
                 		</ul>

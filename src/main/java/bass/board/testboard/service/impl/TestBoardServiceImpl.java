@@ -20,13 +20,16 @@ public class TestBoardServiceImpl implements TestBoardService {
 	@Override
 	public List<Map<String, Object>> selectBoardList(Map<String, Object> commandMap) {
 		
-		try {
-			return dao.selectBoardList(commandMap);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return null;
-		}
+		return dao.selectBoardList(commandMap);
+	}
+
+
+	@Override
+	public List<Map<String, Object>> insertBoard(Map<String, Object> commandMap) {
+
+		dao.insertBoard(commandMap); 
+		return dao.selectBoardList(commandMap);
+		
 	}
 
 }

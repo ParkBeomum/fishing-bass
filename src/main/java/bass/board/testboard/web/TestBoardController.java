@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import bass.board.testboard.service.TestBoardService;
@@ -31,6 +32,8 @@ public class TestBoardController {
 	public String detailBoard(Locale locale, Model model) { 
 		return "board_detail"; 
 	}
+	
+	
 	@RequestMapping(value = "/writeBoard.do", method = RequestMethod.GET)
 	public String writeBoard(Locale locale, Model model) { 
 		return "board_write"; 
@@ -49,5 +52,14 @@ public class TestBoardController {
         return mv;
     }
 
+    @RequestMapping(value="/insertBoard.do")
+    public ModelAndView insertBoard(@RequestParam Map<String,Object> map) throws Exception{
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("board_detail");
+        
+        List<Map<String,Object>> list = svc.insertBoard(map);
+        mv.addObject("list", list);
+        return mv;
+    }
 
 }

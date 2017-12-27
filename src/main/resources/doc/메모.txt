@@ -1,0 +1,102 @@
+angular text edior 필요 ( 게시판용 )'
+
+
+웹에디터 확인
+
+<무료>
+
+http://summernote.org/
+
+<유료>
+
+https://www.froala.com/wysiwyg-editor
+
+
+
+=================================================
+
+자바스크립트 파라미터와 함께 페이지이동 (http://blog.opid.kr/431)
+<html>
+ <head>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script>
+   function setChildValue(index) {
+    window.location.href = "subPage.html?index=" + index;
+   }
+  </script>
+ </head>
+ <body>
+  <button onclick="setChildValue(123)">Click me</button>
+ </body>
+</html>
+
+=================================================
+
+war 복사
+
+ sudo cp /home/ubuntu/dev/prog/fishing-bass/src/main/webapp/fishing-bass.war /var/lib/tomcat7/webapps/
+
+==================================================
+
+
+ubuntu mysql 설치
+
+
+--외부접속 권한부여 ( https://opentutorials.org/module/1175/7779 )
+
+> mysql -u root -p
+
+>  grant all privileges on *.* to 'root'@'%' identified by 'root';
+
+> flush privileges;
+
+
+
+========================================
+
+window mysql 설치
+
+
+
+The InnoDB cluster 'sandboxCluster' is available on the following ports:
+
+     localhost:3310 through localhost:3330
+
+To connect with the MySQL Shell execute the following command:
+
+     mysqlsh root@localhost:3310
+
+To bootstrap the MySQL Router execute the following command:
+
+     mysqlrouter --bootstrap root@localhost:3310 --directory router-sandbox
+
+
+=============================================
+
+
+mysql 샘플디비 생성
+
+create database bass;
+
+샘플 테이블 생성
+create table board(
+	board_number INT(11),
+    board_writer VARCHAR(20),
+    board_title VARCHAR(100),
+    board_content VARCHAR(9999),
+    board_click INT(10),
+    board_good INT(10),
+    PRIMARY KEY (board_number)
+);
+
+create table users(
+	user_number INT(11) NOT NULL,
+    user_name VARCHAR(20) NOT NULL,
+    user_email VARCHAR(40) NOT NULL,
+    user_phone VARCHAR(15) NOT NULL,
+    user_address VARCHAR(100) NOT NULL,
+    user_joindate datetime NOT NULL,
+    PRIMARY KEY (user_number)
+);
+
+

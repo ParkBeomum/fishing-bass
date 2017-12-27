@@ -3,8 +3,11 @@
  
 <mapper namespace="testBoard">
      <select id="selectBoardList" parameterType="hashmap" resultType="hashmap">
-     	SELECT board_number,board_writer,board_title,board_content,board_click,board_good FROM board
+     	SELECT NUM,WRITER,TITLE,CONTENT,CLICK,GOOD,CREATEDATE FROM BOARD
      </select>
+     <insert id="insertBoard" parameterType="hashmap">
+     	INSERT INTO BOARD (WRITER,TITLE,CONTENT,CLICK,GOOD,CREATEDATE) VALUES (1,#{title},#{content},0,0,NOW())
+     </insert>
 </mapper>
 
 
